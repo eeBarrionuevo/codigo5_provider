@@ -1,4 +1,5 @@
 import 'package:codigo5_provider/pages/home_page.dart';
+import 'package:codigo5_provider/providers/api_provider.dart';
 import 'package:codigo5_provider/providers/counter_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -15,6 +16,7 @@ class MyApp extends StatelessWidget {
         // CounterProvider(),
         ChangeNotifierProvider(
             create: (BuildContext context) => CounterProvider()),
+        ChangeNotifierProvider(create: (BuildContext context) => ApiProvider()),
       ],
       child: MaterialApp(
         home: HomePage(),

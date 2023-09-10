@@ -13,7 +13,18 @@ class DetailPage extends StatelessWidget {
         title: Text("Detail Page"),
       ),
       body: Center(
-        child: Text(counterProvider.counter.toString()),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(counterProvider.counter.toString()),
+            ElevatedButton(
+              onPressed: () {
+                counterProvider.addName("Eddy");
+              },
+              child: Text("Agregar"),
+            )
+          ],
+        ),
       ),
     );
   }
