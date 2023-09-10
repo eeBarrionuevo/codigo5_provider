@@ -6,7 +6,7 @@ class CounterProvider extends ChangeNotifier {
   List<int> numbers = [];
 
   changeCounter() {
-    counter = 10;
+    counter++;
     notifyListeners();
   }
 }
